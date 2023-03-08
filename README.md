@@ -1,6 +1,6 @@
 # react-native-webview-with-cert
 
-It is custom WebView that support providing custom certificats to requests. E.g. if you need to use another root cert as trusted and need open resources under that certs. Common WebView will not open it, that one - can.
+This is a custom webview that support external certificates in the requests. It needs when you access to resources that rely on unusual root certificate.
 
 ## Installation
 

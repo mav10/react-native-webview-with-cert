@@ -1,26 +1,21 @@
-import {
-  requireNativeComponent,
-  UIManager,
-  Platform,
-  ViewStyle,
-} from 'react-native';
+import React, { Component } from 'react';
+import { NativeModules, requireNativeComponent } from 'react-native';
+import WebView from 'react-native-webview';
 
-const LINKING_ERROR =
-  `The package 'react-native-webview-with-cert' doesn't seem to be linked. Make sure: \n\n` +
-  Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
-  '- You rebuilt the app after installing the package\n' +
-  '- You are not using Expo Go\n';
+const { CustomWebViewManager } = NativeModules;
 
-type WebviewWithCertProps = {
-  color: string;
-  style: ViewStyle;
-};
+export default class CustomWebView extends Component {
+  render() {
+    return (
+      <WebView
+        {...this.props}
+        nativeConfig={{
+          component: RCTCustomWebView,
+          viewManager: CustomWebViewManager,
+        }}
+      />
+    );
+  }
+}
 
-const ComponentName = 'WebviewWithCertView';
-
-export const WebviewWithCertView =
-  UIManager.getViewManagerConfig(ComponentName) != null
-    ? requireNativeComponent<WebviewWithCertProps>(ComponentName)
-    : () => {
-        throw new Error(LINKING_ERROR);
-      };
+const RCTCustomWebView = requireNativeComponent<any>('RCTCustomWebView') as any;

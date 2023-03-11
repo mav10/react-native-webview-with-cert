@@ -18,4 +18,4 @@ export default class CustomWebView extends Component {
   }
 }
 
-const RCTCustomWebView = requireNativeComponent<any>('RCTCustomWebView') as any;
+const RCTCustomWebView = requireNativeComponent<any>('RNCCustomWebView') as any;

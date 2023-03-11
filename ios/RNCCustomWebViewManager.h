@@ -8,6 +8,6 @@
 
 #import <react-native-webview/RNCWebViewManager.h>
 
-@interface RCTCustomWebViewManager : RNCWebViewManager
+@interface RNCCustomWebViewManager : RNCWebViewManager
 
 @end

@@ -8,6 +8,10 @@
 
 #import <react-native-webview/RNCWebView.h>
 
-@interface RCTCustomWebView : RNCWebView
+@interface RNCCustomWebView : RNCWebView
+
+
+@property (nonatomic, copy) NSString *customUrl;
+
 
 @end

@@ -30,7 +30,6 @@
 		AE32A57129B8C740004B96EF /* RNCCustomWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNCCustomWebView.h; sourceTree = "<group>"; };
 		AE32A57229B8C770004B96EF /* RNCCustomWebViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNCCustomWebViewManager.h; sourceTree = "<group>"; };
 		AE32A57329B8C780004B96EF /* RNCCustomWebViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNCCustomWebViewManager.m; sourceTree = "<group>"; };
-		AE32A57529B8D88E004B96EF /* certificate.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = certificate.der; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				AE120D6D29BCEE6A00975F3C /* RNCWebView+Custom.h */,
-				AE32A57529B8D88E004B96EF /* certificate.der */,
 				AE32A57329B8C780004B96EF /* RNCCustomWebViewManager.m */,
 				AE32A57229B8C770004B96EF /* RNCCustomWebViewManager.h */,
 				AE32A57129B8C740004B96EF /* RNCCustomWebView.h */,

@@ -15,25 +15,7 @@
 
 @implementation RNCCustomWebViewManager { }
 
-RCT_EXPORT_VIEW_PROPERTY(customUrl, NSString)
 RCT_EXPORT_MODULE()
-
--(void)installCerts {
-    // Get the bundle where the certificates in DER format are present.
-      NSBundle *bundle = [NSBundle mainBundle];
-      
-      NSMutableDictionary* certMap = [NSMutableDictionary new];
-
-      NSData *rootCertData = [NSData dataWithContentsOfFile:[bundle pathForResource:@"certificate" ofType:@"der"]];
-
-      SecCertificateRef certificate = SecCertificateCreateWithData(NULL, (CFDataRef) rootCertData);
-       
-      OSStatus err = SecItemAdd((CFDictionaryRef) [NSDictionary dictionaryWithObjectsAndKeys:(id) kSecClassCertificate, kSecClass, certificate, kSecValueRef, nil], NULL);
-      
-      [certMap setObject:(__bridge id _Nonnull)(certificate) forKey:@"sberbank.com"];
-
-      [RNCWebView setCustomCertificatesForHost:certMap];
-}
 
 - (UIView *)view
 {   

@@ -11,7 +11,4 @@
 @interface RNCCustomWebView : RNCWebView
 
 
-@property (nonatomic, copy) NSString *customUrl;
-
-
 @end

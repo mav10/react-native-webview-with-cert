@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import CustomWebView from 'react-native-webview-with-cert';
 import WebView from 'react-native-webview';
 
-const url = 'http://sberbank.ru';
+const url = 'https://www.sberbank.ru';
 
 export default function App() {
   return (
